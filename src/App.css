@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "Thin";
+    src: url("./assets/fonts/Jost-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Regular";
+    src: url("./assets/fonts/Jost-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Medium";
+    src: url("./assets/fonts/Jost-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Bold";
+    src: url("./assets/fonts/Jost-Bold.ttf");
+}
+
+@font-face {
+    font-family: "GE_Regular";
+    src: url("./assets/fonts/GE_Regular.ttf");
+}
+
+@font-face {
+    font-family: "Jost-Italic";
+    src: url("./assets/fonts/Jost-Italic.ttf");
+}
+
+:root {
+    --body-color: #282525;
+
+    --main-color: antiquewhite;
+    --main-color-hover: rgb(227, 211, 190);
+    
+    --text-color: #fff;
+    --button-text-color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.3px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    color: var(--text-color);
+    overflow: hidden;
+    user-select: none;
+    font-family: 'Regular';
+    -webkit-user-select: none;
+    background: var(--body-color);
+}
+
+#root {
+    height: 100%;
+}
+
+.section {
+    position: relative;
+    height: calc(100% - 80px);
+}
+
+.ReactModal__Overlay  {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    border: none !important;
+    outline: none !important;
+    backdrop-filter: blur(10px);
+    background: #000000bf !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition-delay: 9999s;
+    -webkit-transition-delay: 9999s;
+}
+
+.ReactModal__Body--open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.icon-xl {
+    font-size: 30px;
+    transition: .2s;
+    color: var(--main-color);
+}
+
+.icon-md {
+    font-size: 23px;
+    transition: .2s;
+    color: var(--main-color);
+}
+
+
+.icon-md:hover {
+    color: var(--main-color);
+}
+.icon-xl:hover, .icon-xl.active,
+.icon-md:hover, .icon-md.active{
+    color: var(--main-color-hover);
+}
+
+@media only screen and (max-width: 660px) {
+    .section {
+        height: calc(100% - 65px);
+    }
+    .icon-md {
+        font-size: 18px;
+    }
+    .icon-xl:hover,
+    .icon-md:hover {
+        color: var(--main-color);
+    }
+
+    .icon-xl {
+        font-size: 25px;
+    }
+}
