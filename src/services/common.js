@@ -9,7 +9,7 @@ export const isLocalhost = Boolean(
 const hostname = process.env.REACT_APP_API_URL || window.location.origin;
 console.log(process.env.REACT_APP_API_URL, window.location.origin);
 export const GetBaseUrl = () => {
-    return isLocalhost ? 'http://localhost:5000' : hostname;
+    return isLocalhost ? 'http://localhost:5000' : 'https://lexiconapi-production.up.railway.app';
 }
 
 export const consoleLog = (msg) => {
